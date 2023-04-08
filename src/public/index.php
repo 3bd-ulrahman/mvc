@@ -1,12 +1,13 @@
 <?php
-use Ramsey\Uuid\UuidFactory;
+use App\ToasterPro;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use App\PaymentGateway\Paddle\Transaction;
+$toaster = new ToasterPro();
 
-$paddleTransaction = new Transaction();
-
-var_dump($paddleTransaction);
-// $id = new UuidFactory;
-// echo $id->uuid4();
+$toaster->addSlice('bread');
+$toaster->addSlice('bread');
+$toaster->addSlice('bread');
+$toaster->addSlice('bread');
+$toaster->addSlice('bread');
+$toaster->toast();

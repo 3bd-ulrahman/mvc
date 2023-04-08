@@ -4,9 +4,13 @@ declare(strict_types=1);
 
 namespace App\PaymentGateway\Paddle;
 
+use App\Enums\Status;
+
 class Transaction
 {
-    public function __construct() {
-        var_dump(new CustomerProfile);
+    public static int $count = 0;
+
+    public function __construct(public float $amount, public string $description) {
+        
     }
 }
